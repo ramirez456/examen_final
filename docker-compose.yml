@@ -1,0 +1,47 @@
+version: "3.3"
+
+services:
+  nest:
+    build: .
+    restart: always
+    ports:
+      - 3000:3000
+    links:
+      - mysql
+    networks:
+      - asis
+
+  mysql:
+    image: mysql:latest
+    volumes:
+      - data
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_DATABASE: DBasistencia
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 12345678
+    networks:
+      - asis
+
+  data:
+    image: mysql:latest
+    volumes:
+      - /var/lib/mysql
+    command: "true"
+    networks:
+      - asis
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8016:80
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+    networks:
+      - asis
+
+networks:
+    asis:
+    

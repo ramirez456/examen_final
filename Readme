@@ -1,0 +1,25 @@
+sudo docker-compose up -d
+sudo docker-compose start
+http://localhost:3000/
+http://localhost::8016/
+  user: root
+  password: 12345678
+
+npm install -g @nestjs/cli
+npm install -g @types/node@
+npm install -g typescript ts-node typeorm
+npm i
+npm install --save typescript-result
+nvm install v16
+npm i
+npm install --save @nestjs/cqrs
+npm install --save @nestjs/typeorm
+npm i typeorm --save
+npm i node-sql-reader  --save
+npm i moment-timezone  --save
+npm run build
+npm install mysql --save
+
+para matar puerto
+lsof -i tcp:3000
+ kill -9 23351

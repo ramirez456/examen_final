@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "b4a2a4f0-ce3a-460e-b1c1-ad3c0ffb29b1",
+		"name": "ASISTENCIA-NEST-DDD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "participantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/participante/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"participante",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "participantes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"firstName\": \"Prueba\",\n            \"lastName\": \"Post\",\n            \"dni\": \"12345612\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/participante/usuario",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"participante",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "asistencia",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/asistencia",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"asistencia"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
